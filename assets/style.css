@@ -1,19 +1,59 @@
 body {
-	background-image: url("https://raw.githubusercontent.com/everetthumphreys/password-generator/master/assets/wallpaper.png");
+	background-image: url("https://raw.githubusercontent.com/everetthumphreys/code-quiz/master/assets/wallpaper.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: bottom;
-	background-color: #F8B195;
+    background-position: top;
+    background-size: cover;
+	background-color: #355C7D;
 	color: #ffffff;
 	font-family: 'Ubuntu', sans-serif;
 	padding: 10px;
 }
 #container {
-    margin : 20px auto;
-    background-color: white;
-    height: 300px;
-    width : 700px;
-    border-radius: 5px;
-    box-shadow: 0px 5px 15px 0px;
-    position: relative;
+    background-color: #355C7D;
+    border: 5px solid #C06C84;
+    padding: 20px;
+    width: 500px;
+    margin: auto;
 }
+#start{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    background-color: #355C7D;
+    border: 5px solid #C06C84;
+    padding: 20px;
+    width: 400px;
+    margin: auto;
+}
+#start:hover{
+    color : #F8E995;
+    border: 5px solid #F8E995;
+}
+
+#questionImage {
+    width : 200px;
+    height : 200px;
+    position: relative;
+    left : 0px;
+    top : 0px;
+}
+#questionImage img{
+    width : 200px;
+    height : 200px;
+    border-top-left-radius: 5px;
+}
+#question {}
+#question {}
+#choices {}
+.choice {}
+.choice:hover{}
+#timer{}
+#counter{}
+#btimeGuage{}
+#timeGuage{}
+#progress{}
+.prog {}
+#scoreContainer {}
+#scoreContainer p {}
