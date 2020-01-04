@@ -7,74 +7,88 @@
 <!--<![endif]-->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/style.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"
-        async defer></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"
-        async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"
-        async defer></script>
-    <script src="assets/questions.js" async defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-    <div id="container">
-        <div class="row">
-            <div class="col-lg-12"></div>
-            <div id="start" style="display: block;">Start Quiz!</div>
-            <div id="leaderboard" style="display: block;">View Leaderboard</div>
-            <div id="quiz" style="display: none">
-                <div id="questionImage"></div>
-                <div id="quizTimer">75</div>
-                <div id="progress"></div>
-                <div id="question"></div>
-                <div id="choices">
-                    <button type="button" class="btn btn-info choice" id="A"></button>
-                    <button type="button" class="btn btn-info choice" id="B"></button>
-                    <button type="button" class="btn btn-info choice" id="C"></button>
-                    <div id="timer">
-                        <div id="counter"></div>
-                        <div id="timetext">Question Timer:</div>
-                        <div id="btimeGauge"></div>
-                        <div id="timeGauge"></div>
-                </div>
-                </div>
-            </div>
+  <div id="container">
+    <div id="start">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="startButton" style="display: block;">Start Quiz!</div>
+          <div id="leaderboardButton" style="display: block;">View Leaderboard</div>
         </div>
+      </div>
     </div>
-    <!-- <div id="scoreContainer" style="display: none"></div> -->
-    <!-- High Score Modal -->
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+    <div id="quiz">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="questionImage"></div>
+          <div id="quizTimer"></div>
+          <div id="progress"></div>
+          <div id="questionText"></div>
+          <div id="choices"></div>
+          <div id="timer">
+            <div id="counter"></div>
+            <div id="timetext">Question Timer:</div>
+            <div id="btimeGauge"></div>
+            <div id="timeGauge"></div>
           </div>
         </div>
       </div>
+    </div>
+    <div id="scoreContainer">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="scoreEntry">
+            <div id="scoreHeader">
+              <h2>Congratulations!</h2>
+            </div>
+            <div id="scoreMessage">
+              Your score was: <span id="scoreNumber"></span>
+            </div>
+            <form>
+              <div class="form-group">
+                <label for="initialsInput">Enter Your Initials</label>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="initialsInput" aria-describedby="emailHelp"
+                    placeholder="Enter initials">
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-primary" onClick="saveInitials()">Submit Score</button>
+                  </div>
+                </div>
+                <input type="hidden" class="form-control" id="scoreValue" aria-describedby="emailHelp"
+                  placeholder="Enter initials">
+              </div>
+            </form>
+          </div>
+          <div id="highScoresContainer">
+            <h2>Leaderboard:</h2>
+            <ul id="highScores"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="assets/questions.js"></script>
 </body>
 
 </html>
