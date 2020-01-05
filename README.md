@@ -1,14 +1,13 @@
-# Password Generator
+# Code Quiz
 
 ### Credits:
-* [Font Awesome](https://fontawesome.com/)
 * [Wallpaper](https://hdqwalls.com/download/3840x2160/hex-abstract-material-design)
 * W3schools
 * Bootstrap
-* Traversy Media Javascript Tutorials
+* CodeExplained Javascript Tutorial Video
 
 ### View My Web App
-[Click Here](https://everetthumphreys.github.io/password-generator/)
+[Click Here](https://everetthumphreys.github.io/code-quiz/)
 
-![Screenshot](https://raw.githubusercontent.com/everetthumphreys/password-generator/master/assets/Screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/everetthumphreys/code-quiz/master/assets/screenshot.png)
 

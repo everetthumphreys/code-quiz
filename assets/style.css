@@ -57,9 +57,6 @@ body {
 #questionImage {
 	width: 200px;
     padding: 15px;
-    /* position: relative;
-    top: -20px;
-    left: -20px; */
 }
 
 #questionImage img {
@@ -68,16 +65,11 @@ body {
 }
 
 #quizTimer {
-    /* position: relative;
-    top: -220px;
-    left: 260px; */
     font-size: 100px;
     margin-left: 40px;
 }
 
 #progress {
-	/* position: relative;
-    top: -220px; */
 	padding: 5px;
     text-align: right;
 }
@@ -92,11 +84,6 @@ body {
 	margin-right: 5px;
 }
 
-#questionText {
-    /* position: relative;
-    top: -220px; */
-}
-
 #questionText p {
 	margin: 0;
 	padding: 15px;
@@ -105,8 +92,6 @@ body {
 
 #choices {
     width: 470px;
-    /* position: relative;
-    top: -220px; */
 }
 
 .choice {
@@ -120,28 +105,14 @@ body {
     font-weight: bold;
 }
 
-
-#timer {
-	/* height: 100px;
-	width: 430px;
-	position: relative;
-    top: -330px;
-    left: 140px; */
-}
-
 #counter {
     margin-top: 10px;
 	font-size: 25px;
-	/* position: relative;
-	top: 120px;
-	left: -150px; */
 }
 
 #timetext {
     margin-top: 10px;
     font-size: 25px;
-	/* position: relative;
-	top: 90px; */
 }
 
 #btimeGauge {
@@ -150,10 +121,6 @@ body {
 	border-radius: 10px;
     background-color: #ffffff;
     margin-top: 25px;
-	/* margin-left: 25px; */
-	/* position: relative;
-	top: 75px;
-	left: 100px; */
 } 
 
 #timeGauge {
@@ -161,10 +128,6 @@ body {
 	border-radius: 10px;
 	background-color: #C06C84;
 	margin-top: -10px;
-	/* margin-left: 25px; */
-	/* position: relative;
-	top: 75px;
-	left: 100px; */
 }
 
 h2 {
