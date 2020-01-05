@@ -92,8 +92,7 @@ leaderboard.addEventListener("click",renderLeaderboard);
 
 function renderLeaderboard() {
     scoreDiv.style.display = "block";
-    scoreEntry.style.display = "none";
-    renderHighScores();
+    renderHighScores(false);
 }
 
 // start quiz
@@ -211,7 +210,7 @@ function scoreRender(){
 
     scoreNumber.innerHTML = score;
     scoreValue.value = score;
-    renderHighScores();
+    renderHighScores(true);
 }
 
 function saveInitials() {
@@ -225,10 +224,11 @@ function saveInitials() {
  parsedHighScores.push(newHighScore);
 
  localStorage.setItem("highScores", JSON.stringify(parsedHighScores));
- renderHighScores()
+ renderHighScores(false);
 }
 
-function renderHighScores() {
+function renderHighScores(displayInitialInput) {
+    scoreEntry.style.display = displayInitialInput ? "block" : "none";
     const highScoresList = localStorage.getItem("highScores");
     parsedHighScores = highScoresList ? JSON.parse(localStorage.getItem("highScores")) : [];
 
