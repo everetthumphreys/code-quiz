@@ -37,13 +37,13 @@ let questions = [{
 	},
     {
         questionText: "Which HTML tag is used to define an internal style sheet?",
-        choices: ["&#60;style&#62;", "&#60;script&#62;", "&#60;css&#62;"],
+        choices: ["&#60;style&#62;", "&#60;script&#62;", "&#60;css&#62;", "&#60;sheet&#62;"],
         correctIndex: 0,
         imgSrc: "assets/css.png"
     },
     {
         questionText: "Which element has the largest heading?",
-        choices: ["&#60;H1&#62;", "&#60;head&#62", "&#60;h6&#62"],
+        choices: ["&#60;H1&#62;", "&#60;head&#62", "&#60;h6&#62", "&#60;big&#62;"],
         correctIndex: 1,
         imgSrc: "assets/html.png"
     }
