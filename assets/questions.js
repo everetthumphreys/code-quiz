@@ -151,7 +151,7 @@ function renderQuestionTimer() {
 	}
 }
 
-// checkAnwer
+// checkAnswer
 
 function checkAnswer(answer) {
 	const selectedAnswerIndex = parseInt(answer.target.value);
